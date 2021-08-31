@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercicios Introdução", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Relacionamentos", "ConsoleApp1\Relacionamentos.csproj", "{D97AC6C7-B39E-4FEE-B880-D9EBAD595722}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herancas", "Relacionamento Vertical\Herancas.csproj", "{B1AC85FC-971A-45E3-8500-99D7505CABED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Relacionamento_Vertical", "Relacionamento Vertical\Relacionamento_Vertical.csproj", "{B1AC85FC-971A-45E3-8500-99D7505CABED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATV2", "ATV2\ATV2.csproj", "{14750E12-4CA6-4C93-A5F8-DBE38FB18622}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B1AC85FC-971A-45E3-8500-99D7505CABED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1AC85FC-971A-45E3-8500-99D7505CABED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1AC85FC-971A-45E3-8500-99D7505CABED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14750E12-4CA6-4C93-A5F8-DBE38FB18622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14750E12-4CA6-4C93-A5F8-DBE38FB18622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14750E12-4CA6-4C93-A5F8-DBE38FB18622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14750E12-4CA6-4C93-A5F8-DBE38FB18622}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
