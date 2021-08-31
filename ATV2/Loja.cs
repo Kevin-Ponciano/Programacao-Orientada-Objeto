@@ -9,7 +9,8 @@ namespace ATV2
     
     class Loja
     {
-        List<string> listaPedidos = new List<string>();
+        public List<Pedido> listaPedidos;
+
         public Funcionario funcionario;
 
         public void menu()
