@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ATV2
 {
 
     class Loja
     {
-        private List<Pedido> listaPedidos;
+        private List<Pedido> listaPedidos; // Criando uma lista
 
-        public List<Pedido> ListaPedidos { //Propriedade serve apenas pra devolver um valor
+        public List<Pedido> ListaPedidos
+        { //Propriedade serve apenas pra devolver um valor
             get
             {
                 return listaPedidos;
@@ -20,7 +18,7 @@ namespace ATV2
 
         public Loja()
         {
-            listaPedidos = new List<Pedido>();
+            listaPedidos = new List<Pedido>();// Contrutor da loja ja criando a lista de pedidos
         }
 
         public Funcionario funcionario;
@@ -30,7 +28,7 @@ namespace ATV2
             // localizar o X, tal que a propriedade PedidoId seje igual ao PedidoId do pedido
             // caso ache o valor significa que ja tem o codigo registrado
             Pedido p = listaPedidos.Find(x => x.PedidoId == pedido.PedidoId);
-            if(p == null)
+            if (p == null)
             {
                 listaPedidos.Add(pedido);
                 Console.WriteLine("Pedido adicionado...");
@@ -59,7 +57,7 @@ namespace ATV2
         public void removerPedido(int id)
         {
             Pedido p = listaPedidos.Find(x => x.PedidoId == id);
-            if(p != null)
+            if (p != null)
             {
                 listaPedidos.Remove(p);
                 Console.WriteLine($"Pedido {id} removido...");
@@ -68,7 +66,7 @@ namespace ATV2
             {
                 Console.WriteLine("Pedido não encontrado");
             }
-            
+
         }
 
         public void todosPedidos()
@@ -89,12 +87,14 @@ namespace ATV2
             }
 
             return total;
-            
+
         }
+
+
         //Metodos que forem necessários
     }
 
-    
+
 
 
 

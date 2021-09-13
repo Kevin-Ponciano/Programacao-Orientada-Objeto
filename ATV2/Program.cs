@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace ATV2
 {
@@ -14,6 +13,7 @@ namespace ATV2
             Console.WriteLine("[2] - Buscar Pedido");
             Console.WriteLine("[3] - Remover Pedido");
             Console.WriteLine("[4] - Lista dos Pedidos");
+            Console.WriteLine("[5] - Finalizar Pedido");
             Console.WriteLine("[9] - Sair");
             Console.Write("Opção: ");
             int op = Convert.ToInt32(Console.ReadLine()); // Converto a entrada do usuario para int
@@ -23,6 +23,9 @@ namespace ATV2
         static void Main(string[] args)
         {
             Loja loja = new Loja();
+            Funcionario g = new Gerente();
+            Funcionario e = new Estagiario();
+
             int id = 0;
 
             Pedido pedido = new Pedido(01, "02/09/2021", 90, "novo");
@@ -89,28 +92,32 @@ namespace ATV2
 
                     case 5: //finalizar compra
                         Console.WriteLine("Finalizar Compra");
-                        loja.calcularPrecoTotal();
-                        Console.WriteLine("Pressione uma tecla para continuar...");
+                        Console.WriteLine("Insira a Senha");
+                        string key = Console.ReadLine();
+                        float desconto;
+                        if (key == "123")
+                        {
+                            desconto = (g as Gerente).calcularDescontoMaior(loja.calcularPrecoTotal());
+
+                            Console.WriteLine($"Senha do Gerente confirmada\nDesconto de 25% aplicado:\n Valor total: {loja.calcularPrecoTotal()}\n Valor com Desconto: {desconto}");
+                        }
+                        else
+                        {
+                            desconto = (e as Estagiario).calcularDescontoMenor(loja.calcularPrecoTotal());
+
+                            Console.WriteLine($"Conta de Estagiario\nDesconto de 10% aplicado:\n Valor total: {loja.calcularPrecoTotal()}\n Valor com Desconto: {desconto}");
+                        }
+
+                        Console.WriteLine("Pressione uma tecla para confirmar pedido");
                         Console.ReadKey(); //ao pressionar uma tecla o codigo continuara
+
+                        Console.WriteLine("Pedido Finalizado\n Encerrando programa...");
+                        op = 9;
+
                         break;
                 }
             }
 
-
-            //loja.ListaPedidos.Add(new Pedido(01, "02/09/2021", 50, "novo"));
-            //loja.ListaPedidos.Add(new Pedido(02, "02/09/2021", 70, "novo"));
-
-            //loja.removerPedido(5);
-
-            //Funcionario g = new Gerente();
-            //Funcionario e = new Estagiario();
-
-            //(g as Gerente).calcularDescontoMaior(0);
-
-            //loja.buscarPedido();
-
-            
-           
         }
     }
 }
