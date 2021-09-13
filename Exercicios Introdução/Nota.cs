@@ -14,7 +14,7 @@ namespace Exercicios_Introdução
 
         public string Status { 
             get => status;
-            //set => status = value;
+            set => status = value;
         }
 
         private float media;

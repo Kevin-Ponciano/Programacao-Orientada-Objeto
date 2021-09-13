@@ -10,9 +10,10 @@ namespace ATV2
     {
         private string senha;
 
-        //public float calcularDescontoMaior(float valorProduto)
-        //{
-            
-        //}
+        public float calcularDescontoMaior(float valorProduto)
+        {
+            float desconto = (valorProduto * 25) / 100 - valorProduto;
+            return desconto;
+        }
     }
 }
