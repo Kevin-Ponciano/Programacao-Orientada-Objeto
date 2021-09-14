@@ -16,7 +16,7 @@ namespace ATV2
             Console.WriteLine("[5] - Finalizar Pedido");
             Console.WriteLine("[9] - Sair");
             Console.Write("Opção: ");
-            int op = Convert.ToInt32(Console.ReadLine()); // Converto a entrada do usuario para int
+            int op = Convert.ToInt32(Console.ReadLine()); // Converte a entrada do usuario para int
 
             return op;
         }
